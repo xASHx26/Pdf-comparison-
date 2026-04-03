@@ -149,6 +149,15 @@ class App(TkinterDnD.Tk):
         # Set the window icon
         import sys
         import os
+        
+        # Force Windows taskbar to use our custom icon
+        try:
+            import ctypes
+            myappid = 'pdfcomparison.tool.gui.1'
+            ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+        except Exception:
+            pass
+
         if hasattr(sys, '_MEIPASS'):
             # PyInstaller extracting to temporary location
             icon_path = os.path.join(sys._MEIPASS, 'app_icon.ico')
