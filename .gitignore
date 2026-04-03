@@ -1,0 +1,30 @@
+# Environments
+env/
+venv/
+.env
+
+# Go / Python Build Artifacts
+build/
+dist/
+*.spec
+__pycache__/
+*.py[co]
+*.egg-info/
+
+# Development Tools & Temporary Scripts
+convert_icon.py
+app_icon.ico
+
+# Application Output / Generated Reports
+Annotated_PDF_*.pdf
+Combined_Annotated_*.pdf
+pdf_compare_*.pdf
+pdf_compare_*.txt
+pdf_compare_*.json
+temp_annotated*.pdf
+
+# OS/IDE generated files
+.pytest_cache/
+.DS_Store
+.vscode/
+.idea/

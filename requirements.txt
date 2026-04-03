@@ -1,0 +1,6 @@
+pdfplumber
+colorama
+rapidfuzz
+tkinterdnd2
+reportlab
+pymupdf
