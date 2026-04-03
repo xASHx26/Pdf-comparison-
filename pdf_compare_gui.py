@@ -146,6 +146,18 @@ class App(TkinterDnD.Tk):
         self.minsize(820, 620)
         self.configure(bg=BG)
 
+        # Set the window icon
+        import sys
+        import os
+        if hasattr(sys, '_MEIPASS'):
+            # PyInstaller extracting to temporary location
+            icon_path = os.path.join(sys._MEIPASS, 'app_icon.ico')
+        else:
+            icon_path = os.path.abspath('app_icon.ico')
+            
+        if os.path.exists(icon_path):
+            self.iconbitmap(icon_path)
+
         self._path_a = ""
         self._path_b = ""
 
